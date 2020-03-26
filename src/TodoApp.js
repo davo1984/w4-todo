@@ -1,6 +1,7 @@
 // import React from 'react';
 import React, { Component } from 'react';
 import TodoTable from './components/TodoTable.js';
+import Form from './components/Form.js';
 // import './App.css';
 
 class TodoApp extends React.Component {
@@ -8,52 +9,32 @@ class TodoApp extends React.Component {
         super(props)
     }
       state = { 
-        chores: [
-          {
-            name: 'Dave O',
-            chore: 'buy cake',
-            dueBy: 'now',
-            supplies: false,
-          },
-          {
-            name: 'Dave O',
-            chore: 'eat cake',
-            dueBy: 'tomorrow',
-            supplies: false,
-          },
-          {
-            name: 'Dana',
-            chore: 'buy ice cream',
-            dueBy: 'now',
-            supplies: false,
-          },
-          {
-            name: 'Dana',
-            chore: 'eat ice cream',
-            dueBy: 'tomorrow',
-            supplies: false,
-          },
-        ],
+        chores: [],
       }
 
     checkComplete = index => {
-      const { chores } = this.state
+      const { chores } = this.state;
+      console.log("chores=",chores);
 
-      this.setState({
-        chores: chores.filter((chore, i) => {
-          return i !== index
-        }),
-      })
+      // this.setState({
+      //   chores: chores.filter((chore, i) => {
+      //     return i !== index
+      //   }),
+      // })
     }
     
     removeChore = index => {
-      const { chores } = this.state
+      const { chores } = this.state;
 
       this.setState( {
         chores: chores.filter((chore, i) => {
           return i !== index
         }),
       })
+    }
+
+    handleSubmit = chores => {
+      this.setState({ chores: [...this.state.chores, chores]})
     }
 
     render() {
@@ -69,6 +50,7 @@ class TodoApp extends React.Component {
                               checkComplete = { this.checkComplete }
                               removeChore = { this.removeChore } 
                             />
+                            <Form handleSubmit = { this.handleSubmit }/>
                         </div>
                         <div className="col-2"></div>
                     </div>

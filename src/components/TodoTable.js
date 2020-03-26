@@ -11,7 +11,7 @@ const TableHeader = () => {
         <th>Chore</th>
         <th>Date</th>
         <th>Supplies</th>
-        <th>Finished</th>
+        <th>Done</th>
       </tr>
     </thead>
   );
@@ -25,13 +25,14 @@ const TableHeader = () => {
           <td> { row.name }</td>
           <td> { row.chore }</td>
           <td> { row.dueBy }</td>
-          <td> {row.supplies}</td>
+          <td> { row.supplies }</td>
+          <td> { row.done }</td>
           <td>
-            <button onClick={() =>
-                props.checkComplete(index)}>Done</button>
+            <button type="button" className="btn-success border-rounded" onClick={() =>
+              props.checkComplete(index)}>Done</button>
           </td>
           <td>
-            <button onClick = {() => 
+            <button variant="danger" onClick = {() => 
                 props.removeChore(index)}>Delete</button>
           </td>
         </tr>
@@ -51,7 +52,7 @@ class TodoTable extends Component {
 
     render() {
       return (
-        <table>
+        <table striped bordered hover>
           <TableHeader />
           <TableBody choreData = { this.props.choreData } 
             removeChore = { this.props.removeChore } />
