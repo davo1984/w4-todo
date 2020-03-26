@@ -38,7 +38,7 @@ const TableHeader = () => {
         </tr>
       );
     });
-    return <tbody> { tableLine } </tbody>
+    return <tbody>{tableLine}</tbody>
   }
   
   
@@ -52,9 +52,10 @@ class TodoTable extends Component {
 
     render() {
       return (
-        <table striped bordered hover>
+        <table striped="true" bordered="true">
           <TableHeader />
           <TableBody choreData = { this.props.choreData } 
+            checkComplete = { this.props.checkComplete }
             removeChore = { this.props.removeChore } />
         </table>
       );

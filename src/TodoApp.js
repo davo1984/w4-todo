@@ -12,9 +12,9 @@ class TodoApp extends React.Component {
         chores: [],
       }
 
-    checkComplete = index => {
+    checkComplete = (index) => {
       const { chores } = this.state;
-      console.log("chores=",chores);
+      console.log("chores=",chores[this.index]);
 
       // this.setState({
       //   chores: chores.filter((chore, i) => {
