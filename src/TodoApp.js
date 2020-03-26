@@ -10,19 +10,20 @@ class TodoApp extends React.Component {
     }
       state = { 
         chores: [],
-      }
+  }
 
-    checkComplete = (index) => {
-      const { chores } = this.state;
-      console.log("chores=",chores[this.index]);
+  toggleDone = (index) => {
+    console.log("toggleDone before: this.state.isDone=", this.state.isDone);
+    // console.log("toggleDone before: state.isDone=", state.isDone);
+    // console.log("toggleDone before: props.state.isDone=", props.state.isDone);
+    // console.log("toggleDone before: this.props.state.isDone=", this.props.state.isDone);
+    this.setState({
+      isDone: !this.state.isDone
+    })
+    console.log("isDone=",this.state.isDone);
+    // shows false before & after but the object is actually changed to false!?
+  } 
 
-      // this.setState({
-      //   chores: chores.filter((chore, i) => {
-      //     return i !== index
-      //   }),
-      // })
-    }
-    
     removeChore = index => {
       const { chores } = this.state;
 
@@ -47,7 +48,7 @@ class TodoApp extends React.Component {
                         <div className="col-8">
                             <p className="display-3 text-center my-5">Honey Do List</p>
                             <TodoTable choreData = { chores } 
-                              checkComplete = { this.checkComplete }
+                              toggleDone = { this.toggleDone }
                               removeChore = { this.removeChore } 
                             />
                             <Form handleSubmit = { this.handleSubmit }/>

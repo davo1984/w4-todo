@@ -21,15 +21,15 @@ const TableHeader = () => {
     console.log(props);
     const tableLine = props.choreData.map((row, index) => {
       return (
-        <tr key = { index }>
-          <td> { row.name }</td>
-          <td> { row.chore }</td>
-          <td> { row.dueBy }</td>
-          <td> { row.supplies }</td>
-          <td> { row.done }</td>
+        <tr key={index}>
+          <td> {row.name}</td>
+          <td> {row.chore}</td>
+          <td> {row.dueBy}</td>
+          <td> {row.supplies}</td>
+          <td> {row.done}</td>
           <td>
             <button type="button" className="btn-success border-rounded" onClick={() =>
-              props.checkComplete(index)}>Done</button>
+              props.toggleDone(index)}>Done</button>
           </td>
           <td>
             <button variant="danger" onClick = {() => 
@@ -39,8 +39,7 @@ const TableHeader = () => {
       );
     });
     return <tbody>{tableLine}</tbody>
-  }
-  
+}
   
 class TodoTable extends Component {
     constructor(props){
@@ -55,7 +54,7 @@ class TodoTable extends Component {
         <table striped="true" bordered="true">
           <TableHeader />
           <TableBody choreData = { this.props.choreData } 
-            checkComplete = { this.props.checkComplete }
+            toggleDone = { this.props.toggleDone }
             removeChore = { this.props.removeChore } />
         </table>
       );

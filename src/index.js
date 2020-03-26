@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'; 
 import 'bootstrap/dist/css/bootstrap.css';
+import $ from "jquery";
 import TodoApp from './TodoApp';
 import * as serviceWorker from './serviceWorker';
 

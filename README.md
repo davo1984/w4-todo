@@ -1,3 +1,52 @@
+**# W4_toto**
+To do list tracker.  What you've done and what you've still got to do.  See both or either, but it would be kind of silly to see neither.
+
+**What the To-Do List does**
+
+    Dynamically Render the content with React using components
+    Use Local Storage to store all to-do list data in the browser
+    Display all to-do list items
+    Three "views" for the user: All, Completed, & To-Do (not completed)
+    Display Prompting text to add item
+    Cross out or check off one item as "completed"
+    See number of remaining items
+    Remove one item (soft delete / archive)
+    Check off or cross out all items in one click as a "completed all" function
+    Remove all completed items (soft delete / archive)
+    Ability to press a button and all checked off items become active again
+
+**Stretch Goals**
+
+    Import Bootstrap using create-react-app - you will also need to install jquery and popper.js
+    Create a flow diagram for the front end architecture to be used in an MVP
+    Push to GitHub Pages via create-react-app
+    Use MySQL
+    Edit To-Do's in place
+    Write React Tests with create-react-app
+
+**Built With:**
+1. HTML
+2. Css
+3. Bootstrap
+4. JS
+5. React
+
+**Versioning**
+    SemVer
+
+**Authors**
+David Oliver
+
+**License**
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+Or you could if I had actually bothered to put any licensing data on it.  Since this is an exercise, if you want to steal it and call it your own then you won't learn anything, I hope we apply for the same job.
+
+**Acknowledgments**
+Thanks for the Instructors and my fellow students at **Awesome Inc's Bootcamp**
+
+*********************************
+**React added information below**
+*********************************
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
