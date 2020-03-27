@@ -7,11 +7,11 @@ const TableHeader = () => {
   return (
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Chore</th>
-        <th>Date</th>
-        <th>Supplies</th>
-        <th>Done</th>
+        <th scope="col">Name</th>
+        <th scope="col">Chore</th>
+        <th scope="col">Date</th>
+        <th scope="col">Supplies</th>
+        <th scope="col">Done</th>
       </tr>
     </thead>
   );
@@ -21,18 +21,20 @@ const TableHeader = () => {
     console.log(props);
     const tableLine = props.choreData.map((row, index) => {
       return (
-        <tr key={index}>
+        <tr scope="row" key={index}>
           <td> {row.name}</td>
           <td> {row.chore}</td>
           <td> {row.dueBy}</td>
-          <td> {row.supplies}</td>
-          <td> {row.done}</td>
           <td>
-            <button type="button" className="btn-success border-rounded" onClick={() =>
-              props.toggleDone(index)}>Done</button>
+            <button type="button" className="badge badge-pill badge-success" onClick={() =>
+              props.toggleRowSupplies(index)}>Supplies</button> {row.supplies}
           </td>
           <td>
-            <button variant="danger" onClick = {() => 
+            <button type="button" className="badge badge-pill badge-success" onClick={() =>
+              props.toggleDone(index)}>ToDo</button>
+          </td>
+          <td>
+            <button type="button" className="badge badge-pill badge-warning" onClick = {() => 
                 props.removeChore(index)}>Delete</button>
           </td>
         </tr>
@@ -51,7 +53,7 @@ class TodoTable extends Component {
 
     render() {
       return (
-        <table striped="true" bordered="true">
+        <table className="table">
           <TableHeader />
           <TableBody choreData = { this.props.choreData } 
             toggleDone = { this.props.toggleDone }

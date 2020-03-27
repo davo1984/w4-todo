@@ -48,14 +48,16 @@ class Form extends Component {
           id = "chore" 
           value = { chore }
             onChange={this.handleChange} />
-          <input
-            type = "text"
-            name = "dueBy"
-            id = "dueBy"
-            value = { dueBy }
-            onChange={this.handleChange} />
-        <input type="button" value="Supplies?" className="btn-info border-rounded" onClick={this.toggleSupplies} />
-        <input type="button" value="Submit" className="btn-success border-rounded" onClick={this.submitForm} />
+        <input
+          type = "text"
+          name = "dueBy"
+          id = "dueBy"
+          value = { dueBy }
+          onChange={this.handleChange} />
+            {/* type="checkbox" class="form-check-input" id="exampleCheck1" */}
+        <label class="form-check-label" for="supplies">Have Everything?</label>
+        <input type="checkbox" id="supplies" className="form-check-input" onClick={this.toggleSupplies} />
+        <input type="button" value="Submit" className="btn btn-primary border border-rounded" onClick={this.submitForm} />
       </form>
     )
   }
