@@ -8,7 +8,7 @@ class Form extends Component {
     isSupplies: false,
     isDone: false,
   }
-  state = this.initialState;
+  state = this.initialState; 
   
   handleChange = event => {
     const { name, value } = event.target;
@@ -19,16 +19,16 @@ class Form extends Component {
   } 
 
   toggleSupplies = () => {
-    console.log('in toggleSupplies: before isSupplies=', this.state.isSupplies);
+    console.log('in toggleRowSupplies: before isSupplies=', this.state.isSupplies);
     this.setState({
       isSupplies: !this.state.isSupplies
     })
-    console.log('in toggleSupplies: AFTER isSupplies=', this.state.isSupplies);
+    console.log('in toggleRowSupplies: AFTER isSupplies=', this.state.isSupplies);
   }
 
-  submitForm =  () => {
-    this.props.handleSubmit( this.state )
-    this.setState(this.initialState)
+  submitForm = () => {
+    this.props.handleSubmit( this.state );
+    this.setState(this.initialState);
   }
   
   render() {
@@ -55,7 +55,7 @@ class Form extends Component {
           value = { dueBy }
           onChange={this.handleChange} />
             {/* type="checkbox" class="form-check-input" id="exampleCheck1" */}
-        <label class="form-check-label" for="supplies">Have Everything?</label>
+        <label class="form-check-label" for="supplies">Supplies?</label>
         <input type="checkbox" id="supplies" className="form-check-input" onClick={this.toggleSupplies} />
         <input type="button" value="Submit" className="btn btn-primary border border-rounded" onClick={this.submitForm} />
       </form>

@@ -27,7 +27,7 @@ const TableHeader = () => {
           <td> {row.dueBy}</td>
           <td>
             <button type="button" className="badge badge-pill badge-success" onClick={() =>
-              props.toggleRowSupplies(index)}>Supplies</button> {row.supplies}
+              props.toggleRowSuppliesB(index)}>Supplies</button> {row.supplies}
           </td>
           <td>
             <button type="button" className="badge badge-pill badge-success" onClick={() =>
