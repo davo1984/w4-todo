@@ -7,7 +7,7 @@ import Form from './components/Form.js';
 class TodoApp extends React.Component {
     constructor(props){
         super(props)
-        const toggleRowSuppliesB = toggleRowSuppliesB.bind(toggleRowSupplies);
+        // const toggleRowSuppliesB = toggleRowSuppliesB.bind(toggleRowSupplies);
     }
 
       state = { 
