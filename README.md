@@ -1,36 +1,28 @@
 **# W4_toto**
 To do list tracker.  What you've done and what you've still got to do.  See both or either, but it would be kind of silly to see neither.
 
-**Getting Started**
-Run it from a web site or your local browser once I've compiled the production version.
+**What the To-Do List does**
 
-Prerequisites
+    Dynamically Render the content with React using components
+    Use Local Storage to store all to-do list data in the browser
+    Display all to-do list items
+    Three "views" for the user: All, Completed, & To-Do (not completed)
+    Display Prompting text to add item
+    Cross out or check off one item as "completed"
+    See number of remaining items
+    Remove one item (soft delete / archive)
+    Check off or cross out all items in one click as a "completed all" function
+    Remove all completed items (soft delete / archive)
+    Ability to press a button and all checked off items become active again
 
-Give examples
-Installing
-A step by step series of examples that tell you how to get a development env running
+**Stretch Goals**
 
-Say what the step will be
-
-Give the example
-And repeat
-
-until finished
-End with an example of getting some data out of the system or using it for a little demo
-
-Running the tests
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
-
-Give an example
-And coding style tests
-Explain what these tests test and why
-
-Give an example
-Deployment
-
+    Import Bootstrap using create-react-app - you will also need to install jquery and popper.js
+    Create a flow diagram for the front end architecture to be used in an MVP
+    Push to GitHub Pages via create-react-app
+    Use MySQL
+    Edit To-Do's in place
+    Write React Tests with create-react-app
 
 **Built With:**
 1. HTML
@@ -52,10 +44,9 @@ Or you could if I had actually bothered to put any licensing data on it.  Since 
 **Acknowledgments**
 Thanks for the Instructors and my fellow students at **Awesome Inc's Bootcamp**
 
-
-
-
+*********************************
 **React added information below**
+*********************************
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

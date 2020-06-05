@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container-flex {
+  background-color: ivory;
+  background-image: "./images/to-do-list.png";
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height:100vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
