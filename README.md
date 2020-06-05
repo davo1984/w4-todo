@@ -31,10 +31,7 @@ To do list tracker.  What you've done and what you've still got to do.  See both
 4. JS
 5. React
 
-**Versioning**
-    SemVer
-
-**Authors**
+**Author**
 David Oliver
 
 **License**
@@ -43,6 +40,11 @@ Or you could if I had actually bothered to put any licensing data on it.  Since 
 
 **Acknowledgments**
 Thanks for the Instructors and my fellow students at **Awesome Inc's Bootcamp**
+
+**How to Run**
+Clone the repository to a local directory. Assuming that you have npm installed go into that directory you just created and run:
+npm install
+npm start
 
 *********************************
 **React added information below**

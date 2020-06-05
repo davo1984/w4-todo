@@ -1,7 +1,4 @@
-// import React from 'react';
 import React, { Component } from 'react';
-// import './App.css';
-
 
 const TableHeader = () => {
   return (
@@ -55,7 +52,9 @@ class TodoTable extends Component {
       return (
         <table className="table">
           <TableHeader />
-          <TableBody choreData = { this.props.choreData } 
+          <TableBody 
+            choreData = { this.props.choreData } 
+            toggleRowSupplies = { this.props.toggleRowSupplies }
             toggleDone = { this.props.toggleDone }
             removeChore = { this.props.removeChore } />
         </table>

@@ -1,8 +1,8 @@
-// import React from 'react';
 import React, { Component } from 'react';
 import TodoTable from './components/TodoTable.js';
 import Form from './components/Form.js';
-// import './App.css';
+// convert hard coded to a JSON file
+// get rid of json and add a laravel DB backend
 
 class TodoApp extends React.Component {
     constructor(props){
@@ -36,7 +36,7 @@ class TodoApp extends React.Component {
         ],
   }
 
-  toggleRowSupplies = () => {
+  toggleRowSupplies = (index) => {
     // console.log('in toggleSupplies: before isSupplies=', this.state.isSupplies);
     this.setState({
       isSupplies: !this.state.isSupplies
@@ -48,13 +48,13 @@ class TodoApp extends React.Component {
           {this.state.isSupplies ? "<i class=\"far fa-check-square\"></i>" : 'ToDo'}
         </button>
       );
-      // console.log("isDone=",this.state.isDone);
+      console.log("isDone=",this.state.isDone);
       // shows false before & after but the object is actually changed to false!?
     } 
     // console.log('in toggleSupplies: AFTER isSupplies=', this.state.isSupplies);
     
     toggleDone = (index) => {
-      // console.log("toggleDone before: this.state.isDone=", this.state.isDone);
+      console.log("toggleDone before: this.state.isDone=", this.state.isDone);
       // console.log("toggleDone before: state.isDone=", state.isDone);
       // console.log("toggleDone before: props.state.isDone=", props.state.isDone);
       // console.log("toggleDone before: this.props.state.isDone=", this.props.state.isDone);
@@ -96,7 +96,9 @@ class TodoApp extends React.Component {
                         <div className="col-2"></div>
                         <div className="col-8">
                             <p className="display-3 text-center my-5">Honey Do List</p>
-                            <TodoTable choreData = { chores } 
+                            <TodoTable 
+                              choreData = { chores } 
+                              toggleRowSupplies = { this.toggleRowSupplies }
                               toggleDone = { this.toggleDone }
                               removeChore = { this.removeChore } 
                             />
