@@ -7,8 +7,8 @@ const TableHeader = () => {
         <th scope="col">Name</th>
         <th scope="col">Chore</th>
         <th scope="col">Date</th>
-        <th scope="col">Supplies</th>
-        <th scope="col">Done</th>
+        <th scope="col">Done?</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
   );
@@ -22,19 +22,25 @@ const TableHeader = () => {
           <td> {row.name}</td>
           <td> {row.chore}</td>
           <td> {row.dueBy}</td>
-          <td>
+
+          {/* <td>
             <button type="button" className="badge badge-pill badge-success" onClick={() =>
               props.toggleRowSupplies(index)}>Supplies</button> {row.supplies}
-          </td>
+          </td> */}
+
           <td>
             <button type="button" className="badge badge-pill badge-success" onClick={() =>
-              props.toggleDone(index)}>ToDo</button>
+              props.toggleDone(index)}>{ this.state.isDone ? props.ToDo : "ToDo" }</button>
+            {/*    props.toggleDone(index)}>{ props.ToDo ? props.ToDo : "ToDo" }</button> */}
           </td>
+
           <td>
             <button type="button" className="badge badge-pill badge-warning" onClick = {() => 
                 props.removeChore(index)}>Delete</button>
           </td>
+
         </tr>
+
       );
     });
     return <tbody>{tableLine}</tbody>
@@ -54,7 +60,7 @@ class TodoTable extends Component {
           <TableHeader />
           <TableBody 
             choreData = { this.props.choreData } 
-            toggleRowSupplies = { this.props.toggleRowSupplies }
+            // toggleRowSupplies = { this.props.toggleRowSupplies }
             toggleDone = { this.props.toggleDone }
             removeChore = { this.props.removeChore } />
         </table>

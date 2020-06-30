@@ -4,6 +4,8 @@ import Form from './components/Form.js';
 // convert hard coded to a JSON file
 // get rid of json and add a laravel DB backend
 
+let ToDo = "ToDo";
+
 class TodoApp extends React.Component {
     constructor(props){
         super(props)
@@ -12,28 +14,29 @@ class TodoApp extends React.Component {
 
       state = { 
         chores: [
-          {
-            name: "Dana",
-            chore: "eat cake",
-            dueBy: "",
-            isSupplies: false,
-            isDone: false,
-          },
-          {
-            name: "Dave O",
-            chore: "rebuild house",
-            dueBy: "ASAP",
-            isSupplies: false,
-            isDone: false,
-          },
-          {
-            name: "Tommy",
-            chore: "study",
-            dueBy: "",
-            isSupplies: false,
-            isDone: false,
-          },
-        ],
+        ]
+        //   {
+        //     name: "Dana",
+        //     chore: "eat cake",
+        //     dueBy: "",
+        //     isSupplies: false,
+        //     isDone: false,
+        //   },
+        //   {
+        //     name: "Dave O",
+        //     chore: "rebuild house",
+        //     dueBy: "ASAP",
+        //     isSupplies: false,
+        //     isDone: false,
+        //   },
+        //   {
+        //     name: "Tommy",
+        //     chore: "study",
+        //     dueBy: "",
+        //     isSupplies: false,
+        //     isDone: false,
+        //   },
+        // ],
   }
 
   toggleRowSupplies = (index) => {
@@ -52,15 +55,13 @@ class TodoApp extends React.Component {
       // shows false before & after but the object is actually changed to false!?
     } 
     // console.log('in toggleSupplies: AFTER isSupplies=', this.state.isSupplies);
-    
+
     toggleDone = (index) => {
-      console.log("toggleDone before: this.state.isDone=", this.state.isDone);
-      // console.log("toggleDone before: state.isDone=", state.isDone);
-      // console.log("toggleDone before: props.state.isDone=", props.state.isDone);
-      // console.log("toggleDone before: this.props.state.isDone=", this.props.state.isDone);
-      this.setState({
-        isDone: !this.state.isDone
-      });
+        ToDo = ( ToDo === "ToDo") ? "Done" : "ToDo";
+        this.setState({
+            isDone: !this.state.isDone
+        });
+        console.log("toggleDone before: this.state.isDone=", this.state.isDone);
     }
     
     render() {
@@ -100,6 +101,7 @@ class TodoApp extends React.Component {
                               choreData = { chores } 
                               toggleRowSupplies = { this.toggleRowSupplies }
                               toggleDone = { this.toggleDone }
+                              ToDo = { this.ToDo }
                               removeChore = { this.removeChore } 
                             />
                             <Form handleSubmit = { this.handleSubmit }/>
