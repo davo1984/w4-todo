@@ -30,7 +30,7 @@ const TableHeader = () => {
 
           <td>
             <button type="button" className="badge badge-pill badge-success" onClick={() =>
-              props.toggleDone(index)}>{ this.state.isDone ? props.ToDo : "ToDo" }</button>
+              props.toggleDone(index)}>{ props.ToDo ? "ToDo" : "Done" }</button>
             {/*    props.toggleDone(index)}>{ props.ToDo ? props.ToDo : "ToDo" }</button> */}
           </td>
 

@@ -64,15 +64,15 @@ class TodoApp extends React.Component {
         console.log("toggleDone before: this.state.isDone=", this.state.isDone);
     }
     
-    render() {
-      return (
-        <button onClick={this.handleClick}>        
-          {this.state.isDone ? 'Done' : 'ToDo'}
-        </button>
-      );
+    // render() {
+    //   return (
+    //     <button onClick={this.handleClick}>        
+    //       {this.state.isDone ? 'Done' : 'ToDo'}
+    //     </button>
+    //   );
       // console.log("isDone=",this.state.isDone);
       // shows false before & after but the object is actually changed to false!?
-    } 
+    // } 
     
     removeChore = index => {
       const { chores } = this.state;
